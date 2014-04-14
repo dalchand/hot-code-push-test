@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+
   
   var setId = function(id) {
     Meteor.call("setId", id, function(error, result){
@@ -7,6 +8,7 @@ if (Meteor.isClient) {
         }     
     });
   }
+
 
   Meteor.startup(function(){
       console.log("startup called");
@@ -36,6 +38,8 @@ if (Meteor.isServer) {
     console.log(self.userId);
     if(self.userId){
       return Documents.find({userId: self.userId});
-    }
+    } else {
+	self.ready();
+	}
   });
 }
