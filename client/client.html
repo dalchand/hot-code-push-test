@@ -1,0 +1,14 @@
+<head>
+  <title>hot-code-push-test</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{#each documents}}
+  <h4>{{title}}</h4>
+  {{/each}}
+</template>
