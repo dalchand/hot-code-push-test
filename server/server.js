@@ -1,5 +1,6 @@
 var Documents = new Meteor.Collection("documents");
 
+
 Meteor.methods({
     setId: function(id){
       try {
